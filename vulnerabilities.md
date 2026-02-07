@@ -3,7 +3,7 @@
 **Category:** OWASP A05:2025 Injection
 
 **Description:**  
-The login form failed to properly sanitize user input, allowing SQL injection.
+The login endpoint fails to validate user input, allowing SQL injection to bypass authentication.
 
 **Steps to Reproduce:**
 1. Navigate to the login page under Account
@@ -11,8 +11,12 @@ The login form failed to properly sanitize user input, allowing SQL injection.
 3. Enter any password, I used `anything`
 4. Click login
 
+**Evidence:**
+- Intercepted POST request to `/rest/user/login`
+- Application granted access without valid credentials
+
 **Impact:**  
-An attacker can bypass authentication and access user accounts.
+An attacker can gain unauthorized access to user accounts.
 
 **Mitigation:**  
-Use parameterized queries and input validation.
+Use parameterized queries and proper input validation.
