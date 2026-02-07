@@ -39,10 +39,10 @@ Use parameterized queries and proper input validation.
 ## Proof (Screensots)
 
 ### SQL Injection Payload
-![SQL Injection Payload](screenshots/sql_injection_login-info.png)
+![SQL Injection Payload](screenshots/sql-injection-login-info.png)
 
 ### Successful Authentication Bypass
-![Successful Login](screenshots/sql_injection-login-successful-.png)
+![Successful Login](screenshots/sql-injection-login-successful.png)
 
 ### Intercepted POST Request (Burp Suite)
 
